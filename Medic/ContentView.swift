@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Medic
-//
-//  Created by Vladimir on 03.03.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
