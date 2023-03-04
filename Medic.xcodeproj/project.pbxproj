@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273C416929B24C6C00F11636 /* MedicHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416829B24C6C00F11636 /* MedicHTTPClient.swift */; };
+		273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416A29B24F3C00F11636 /* LoginViewModel.swift */; };
+		273C416D29B2501C00F11636 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416C29B2501C00F11636 /* CodeView.swift */; };
 		2767502229B245E900A3CA40 /* MedicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767502129B245E900A3CA40 /* MedicApp.swift */; };
 		2767502429B245E900A3CA40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767502329B245E900A3CA40 /* ContentView.swift */; };
 		2767502629B245EA00A3CA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502529B245EA00A3CA40 /* Assets.xcassets */; };
 		2767502929B245EA00A3CA40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502829B245EA00A3CA40 /* Preview Assets.xcassets */; };
+		2767503129B247DD00A3CA40 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767503029B247DD00A3CA40 /* EmailView.swift */; };
+		27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81029B3090000CCB912 /* MedicTextField.swift */; };
+		27D7F81329B30B0F00CCB912 /* MedicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81229B30B0F00CCB912 /* MedicButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273C416829B24C6C00F11636 /* MedicHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicHTTPClient.swift; sourceTree = "<group>"; };
+		273C416A29B24F3C00F11636 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		273C416C29B2501C00F11636 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		273C416E29B2601200F11636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2767501E29B245E900A3CA40 /* Medic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2767502129B245E900A3CA40 /* MedicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApp.swift; sourceTree = "<group>"; };
 		2767502329B245E900A3CA40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2767502529B245EA00A3CA40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2767502829B245EA00A3CA40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2767503029B247DD00A3CA40 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		27D7F81029B3090000CCB912 /* MedicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicTextField.swift; sourceTree = "<group>"; };
+		27D7F81229B30B0F00CCB912 /* MedicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +64,16 @@
 		2767502029B245E900A3CA40 /* Medic */ = {
 			isa = PBXGroup;
 			children = (
+				273C416E29B2601200F11636 /* Info.plist */,
+				2767502F29B2469500A3CA40 /* Supporting Files */,
 				2767502129B245E900A3CA40 /* MedicApp.swift */,
 				2767502329B245E900A3CA40 /* ContentView.swift */,
-				2767502529B245EA00A3CA40 /* Assets.xcassets */,
-				2767502729B245EA00A3CA40 /* Preview Content */,
+				2767503029B247DD00A3CA40 /* EmailView.swift */,
+				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
+				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
+				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
+				273C416A29B24F3C00F11636 /* LoginViewModel.swift */,
+				273C416C29B2501C00F11636 /* CodeView.swift */,
 			);
 			path = Medic;
 			sourceTree = "<group>";
@@ -65,6 +84,15 @@
 				2767502829B245EA00A3CA40 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2767502F29B2469500A3CA40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2767502729B245EA00A3CA40 /* Preview Content */,
+				2767502529B245EA00A3CA40 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2767502429B245E900A3CA40 /* ContentView.swift in Sources */,
+				273C416929B24C6C00F11636 /* MedicHTTPClient.swift in Sources */,
+				27D7F81329B30B0F00CCB912 /* MedicButton.swift in Sources */,
 				2767502229B245E900A3CA40 /* MedicApp.swift in Sources */,
+				273C416D29B2501C00F11636 /* CodeView.swift in Sources */,
+				273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */,
+				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
+				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +304,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Medic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +333,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Medic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
