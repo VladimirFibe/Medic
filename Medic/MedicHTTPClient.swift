@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 enum NetworkError: Error {
     case invalidURL
@@ -35,6 +35,7 @@ struct News: Codable, Identifiable {
 }
 
 final class MedicHTTPClient {
+    @AppStorage("token") var token = ""
     static let shared = MedicHTTPClient()
     private init(){}
     
@@ -49,10 +50,9 @@ final class MedicHTTPClient {
               httpResponse.statusCode == 200 else {
             throw NetworkError.invalidResponse
         }
-        guard let response = try? JSONDecoder().decode(EmailResponse.self, from: data) else {
+        guard let _ = try? JSONDecoder().decode(EmailResponse.self, from: data) else {
             throw NetworkError.decodingError
         }
-        print(response)
     }
     func signin(email: String, code: String) async throws -> String{
         guard let url = URL(string: "https://medic.madskill.ru/api/signin") else { throw NetworkError.invalidURL}
@@ -101,5 +101,24 @@ final class MedicHTTPClient {
             throw NetworkError.decodingError
         }
         return response
+    }
+    func createProfile(card: Card) async throws {
+        guard let url = URL(string: "https://medic.madskill.ru/api/createProfile") else { throw NetworkError.invalidURL}
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let requestData = try JSONEncoder().encode(card)
+        let (data, response) = try await URLSession.shared.upload(for: request, from: requestData)
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw NetworkError.invalidResponse
+        }
+        let str = String(decoding: data, as: UTF8.self)
+        print(str)
+//        guard let response = try? JSONDecoder().decode(EmailResponse.self, from: data) else {
+//            throw NetworkError.decodingError
+//        }
     }
 }

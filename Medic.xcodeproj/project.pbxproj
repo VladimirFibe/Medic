@@ -17,6 +17,8 @@
 		2767503129B247DD00A3CA40 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767503029B247DD00A3CA40 /* EmailView.swift */; };
 		27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81029B3090000CCB912 /* MedicTextField.swift */; };
 		27D7F81329B30B0F00CCB912 /* MedicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81229B30B0F00CCB912 /* MedicButton.swift */; };
+		27D7F81529B3174A00CCB912 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81429B3174900CCB912 /* CardView.swift */; };
+		27D7F81729B317E000CCB912 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81629B317E000CCB912 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2767503029B247DD00A3CA40 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		27D7F81029B3090000CCB912 /* MedicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicTextField.swift; sourceTree = "<group>"; };
 		27D7F81229B30B0F00CCB912 /* MedicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicButton.swift; sourceTree = "<group>"; };
+		27D7F81429B3174900CCB912 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		27D7F81629B317E000CCB912 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,14 @@
 				2767502F29B2469500A3CA40 /* Supporting Files */,
 				2767502129B245E900A3CA40 /* MedicApp.swift */,
 				2767502329B245E900A3CA40 /* ContentView.swift */,
+				27D7F81429B3174900CCB912 /* CardView.swift */,
 				2767503029B247DD00A3CA40 /* EmailView.swift */,
 				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
 				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
 				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
 				273C416A29B24F3C00F11636 /* LoginViewModel.swift */,
 				273C416C29B2501C00F11636 /* CodeView.swift */,
+				27D7F81629B317E000CCB912 /* Card.swift */,
 			);
 			path = Medic;
 			sourceTree = "<group>";
@@ -166,11 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2767502429B245E900A3CA40 /* ContentView.swift in Sources */,
+				27D7F81529B3174A00CCB912 /* CardView.swift in Sources */,
 				273C416929B24C6C00F11636 /* MedicHTTPClient.swift in Sources */,
 				27D7F81329B30B0F00CCB912 /* MedicButton.swift in Sources */,
 				2767502229B245E900A3CA40 /* MedicApp.swift in Sources */,
 				273C416D29B2501C00F11636 /* CodeView.swift in Sources */,
 				273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */,
+				27D7F81729B317E000CCB912 /* Card.swift in Sources */,
 				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
 				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,
 			);
@@ -305,8 +313,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Medic/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,8 +342,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Medic/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -5,6 +5,7 @@ struct CodeView: View {
     var body: some View {
         VStack {
             TextField("code", text: $viewModel.code)
+                .textFieldStyle(.roundedBorder)
             Button {
                 Task {
                    try await viewModel.signin()

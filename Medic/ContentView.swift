@@ -13,14 +13,7 @@ struct ContentView: View {
                 EmailView()
             }
         } else {
-            List(news) {
-                Text($0.name)
-            }
-            .task {
-                do {
-                    news = try await MedicHTTPClient.shared.news()
-                } catch {}
-            }
+            CardView()
         }
     }
 }
