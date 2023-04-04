@@ -16,6 +16,7 @@
 		2767502929B245EA00A3CA40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502829B245EA00A3CA40 /* Preview Assets.xcassets */; };
 		2767503129B247DD00A3CA40 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767503029B247DD00A3CA40 /* EmailView.swift */; };
 		2788384829DBCD1300E89B2E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2788384729DBCD1300E89B2E /* Launch Screen.storyboard */; };
+		27A292F329DC4D2B00BC59A9 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */; };
 		27B8926029D9D423001B537D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8925F29D9D423001B537D /* OnboardingView.swift */; };
 		27B8926229D9D503001B537D /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8926129D9D503001B537D /* OnboardingModel.swift */; };
 		27B8926429D9E54F001B537D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8926329D9E54F001B537D /* Color+Extension.swift */; };
@@ -38,6 +39,7 @@
 		2767502829B245EA00A3CA40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2767503029B247DD00A3CA40 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		2788384729DBCD1300E89B2E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		27B8925F29D9D423001B537D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		27B8926129D9D503001B537D /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		27B8926329D9E54F001B537D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -86,8 +88,8 @@
 				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
 				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
 				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
-				27A292F129DC47F000BC59A9 /* Login */,
 				27D7F81629B317E000CCB912 /* Card.swift */,
+				27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */,
 				27B8926329D9E54F001B537D /* Color+Extension.swift */,
 				2788384729DBCD1300E89B2E /* Launch Screen.storyboard */,
 			);
@@ -125,6 +127,7 @@
 		27B8925D29D9D3F7001B537D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				27A292F129DC47F000BC59A9 /* Login */,
 				27B8925E29D9D40C001B537D /* Onboarding */,
 			);
 			path = Feature;
@@ -231,6 +234,7 @@
 				27B8926229D9D503001B537D /* OnboardingModel.swift in Sources */,
 				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
 				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,
+				27A292F329DC4D2B00BC59A9 /* CreatePasswordView.swift in Sources */,
 				27B8926029D9D423001B537D /* OnboardingView.swift in Sources */,
 				27B8926429D9E54F001B537D /* Color+Extension.swift in Sources */,
 			);
