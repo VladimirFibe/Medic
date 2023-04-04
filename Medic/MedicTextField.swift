@@ -1,18 +1,15 @@
-//
-//  MedicTextField.swift
-//  Medic
-//
-//  Created by Vladimir on 04.03.2023.
-//
-
 import SwiftUI
 
 struct MedicTextField: View {
     let title: String
     @Binding var text: String
     var body: some View {
+        let roundRect = RoundedRectangle(cornerRadius: 10, style: .continuous)
         TextField(title, text: $text)
-            .textFieldStyle(.roundedBorder)
+            .frame(height: 48)
+            .padding(.leading)
+            .background(roundRect.fill(Color.inputBackground))
+            .overlay(roundRect.stroke(Color.inputStroke, lineWidth: 1))
     }
 }
 

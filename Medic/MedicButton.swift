@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MedicButton: View {
     let title: String
+    var disabled = false
     let action: () -> ()
     var body: some View {
         Button(action: action) {
@@ -11,13 +12,8 @@ struct MedicButton: View {
                 .background(.blue)
                 .cornerRadius(10)
                 .foregroundColor(.white)
+                .opacity(disabled ? 0.5 : 1)
         }
-    }
-}
-
-struct MedicButton_Previews: PreviewProvider {
-    static var previews: some View {
-        MedicButton(title: "Поехали", action: {})
-            .padding()
+        .disabled(disabled)
     }
 }
