@@ -36,8 +36,8 @@ struct CreatePasswordView: View {
             }
             .overlay(
                 Button(action: {
-                    if !password.isEmpty {
-                        password.removeLast()
+                    if !keys.isEmpty {
+                        keys.removeLast()
                     }
                 }, label: {
                     Image("DelIcon")
