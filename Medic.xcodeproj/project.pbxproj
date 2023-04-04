@@ -86,10 +86,10 @@
 				2767502329B245E900A3CA40 /* ContentView.swift */,
 				27D2C17829DAD4650054F9B7 /* Card */,
 				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
+				27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */,
 				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
 				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
 				27D7F81629B317E000CCB912 /* Card.swift */,
-				27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */,
 				27B8926329D9E54F001B537D /* Color+Extension.swift */,
 				2788384729DBCD1300E89B2E /* Launch Screen.storyboard */,
 			);

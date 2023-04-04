@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("token") var token = ""
+    @AppStorage("password") var password = ""
     @AppStorage("onboarding") var onboarding = true
     @EnvironmentObject var viewModel: LoginViewModel
     @State private var catalog: [Catalog] = []
@@ -15,6 +16,8 @@ struct ContentView: View {
             } else {
                 EmailView()
             }
+        } else if password.isEmpty {
+            CreatePasswordView()
         } else {
             CardView()
         }
