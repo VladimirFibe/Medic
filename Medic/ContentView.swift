@@ -2,11 +2,14 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("token") var token = ""
+    @AppStorage("onboarding") var onboarding = true
     @EnvironmentObject var viewModel: LoginViewModel
     @State private var catalog: [Catalog] = []
     @State private var news: [News] = []
     var body: some View {
-        if token.isEmpty {
+        if onboarding {
+            OnboardingView()
+        } else if token.isEmpty {
             if viewModel.registred {
                 CodeView()
             } else {

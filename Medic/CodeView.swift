@@ -4,24 +4,49 @@ struct CodeView: View {
     @EnvironmentObject var viewModel: LoginViewModel
     var body: some View {
         VStack {
-            TextField("code", text: $viewModel.code)
-                .textFieldStyle(.roundedBorder)
-            Button {
-                Task {
-                   try await viewModel.signin()
-                }
-            } label: {
-                Text("Далее")
-                    .padding(.vertical)
-                    .frame(maxWidth: .infinity)
-                    .background(.blue)
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-            }
-            .disabled(viewModel.code.isEmpty)
-
+            Text("Введите код из E-mail")
+                .font(.system(size: 17, weight: .semibold))
+                .padding(.bottom, 24)
+            passcode
+            Text("Отправить код повторно можно будет через 42 секунд")
+                .font(.system(size: 15))
+                .foregroundColor(.medicGray)
+                .padding(.top, 16)            
         }
         .padding()
+    }
+    
+
+    var passcode: some View {
+        ZStack {
+            pinDots
+            backgroundField
+        }
+    }
+    private var pinDots: some View {
+        HStack(spacing: 16.0) {
+            let roundRect = RoundedRectangle(cornerRadius: 10, style: .continuous)
+            ForEach(0..<4) { index in
+                Text(viewModel.getImageName(at: index))
+                    .font(.system(size: 20))
+                    .frame(width: 46, height: 46)
+                    .background(roundRect.fill(Color.inputBackground))
+                    .overlay(roundRect.stroke(Color.inputStroke, lineWidth: 1))
+                    
+            }
+        }
+    }
+    
+    private var backgroundField: some View {
+        let boundPin = Binding<String>(get: { self.viewModel.code }, set: { newValue in
+            self.viewModel.code = newValue
+            viewModel.submitPin()
+        })
+        
+        return TextField("", text: boundPin, onCommit: viewModel.submitPin)
+            .accentColor(.clear)
+            .foregroundColor(.clear)
+            .keyboardType(.numberPad)
     }
 }
 
@@ -29,6 +54,32 @@ struct CodeView_Previews: PreviewProvider {
     static var previews: some View {
         CodeView()
             .environmentObject(LoginViewModel())
+    }
+}
+
+extension String {
+    
+    var digits: [Int] {
+        var result = [Int]()
+        
+        for char in self {
+            if let number = Int(String(char)) {
+                result.append(number)
+            }
+        }
+        
+        return result
+    }
+    
+}
+
+extension Int {
+    
+    var numberString: String {
+        
+        guard self < 10 else { return "0" }
+        
+        return String(self)
     }
 }
 

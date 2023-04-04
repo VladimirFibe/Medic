@@ -4,8 +4,9 @@ final class LoginViewModel: ObservableObject {
     @AppStorage("token") var token = ""
     @Published var registred = false
     @Published var login = false
-    @Published var email = ""
+    @Published var email = "motiw@icloud.com"
     @Published var code = ""
+    
     @MainActor
     func sendEmail() async throws {
         do {
@@ -23,5 +24,21 @@ final class LoginViewModel: ObservableObject {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func submitPin() {
+        if code.count == 4 {
+            Task {
+                try await signin()
+            }
+        }
+        if code.count > 4 {
+            code = String(code.prefix(4))
+            submitPin()
+        }
+    }
+    
+    func getImageName(at index: Int) -> String {
+        index >= code.count ? "" : code.digits[index].numberString
     }
 }

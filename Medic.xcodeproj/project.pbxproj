@@ -15,6 +15,10 @@
 		2767502629B245EA00A3CA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502529B245EA00A3CA40 /* Assets.xcassets */; };
 		2767502929B245EA00A3CA40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502829B245EA00A3CA40 /* Preview Assets.xcassets */; };
 		2767503129B247DD00A3CA40 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767503029B247DD00A3CA40 /* EmailView.swift */; };
+		27B8926029D9D423001B537D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8925F29D9D423001B537D /* OnboardingView.swift */; };
+		27B8926229D9D503001B537D /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8926129D9D503001B537D /* OnboardingModel.swift */; };
+		27B8926429D9E54F001B537D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8926329D9E54F001B537D /* Color+Extension.swift */; };
+		27D2C17A29DAD4740054F9B7 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2C17929DAD4740054F9B7 /* CardViewModel.swift */; };
 		27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81029B3090000CCB912 /* MedicTextField.swift */; };
 		27D7F81329B30B0F00CCB912 /* MedicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81229B30B0F00CCB912 /* MedicButton.swift */; };
 		27D7F81529B3174A00CCB912 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7F81429B3174900CCB912 /* CardView.swift */; };
@@ -32,6 +36,10 @@
 		2767502529B245EA00A3CA40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2767502829B245EA00A3CA40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2767503029B247DD00A3CA40 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		27B8925F29D9D423001B537D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		27B8926129D9D503001B537D /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		27B8926329D9E54F001B537D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		27D2C17929DAD4740054F9B7 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		27D7F81029B3090000CCB912 /* MedicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicTextField.swift; sourceTree = "<group>"; };
 		27D7F81229B30B0F00CCB912 /* MedicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicButton.swift; sourceTree = "<group>"; };
 		27D7F81429B3174900CCB912 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -68,11 +76,11 @@
 		2767502029B245E900A3CA40 /* Medic */ = {
 			isa = PBXGroup;
 			children = (
-				273C416E29B2601200F11636 /* Info.plist */,
+				27B8925D29D9D3F7001B537D /* Feature */,
 				2767502F29B2469500A3CA40 /* Supporting Files */,
 				2767502129B245E900A3CA40 /* MedicApp.swift */,
 				2767502329B245E900A3CA40 /* ContentView.swift */,
-				27D7F81429B3174900CCB912 /* CardView.swift */,
+				27D2C17829DAD4650054F9B7 /* Card */,
 				2767503029B247DD00A3CA40 /* EmailView.swift */,
 				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
 				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
@@ -80,6 +88,7 @@
 				273C416A29B24F3C00F11636 /* LoginViewModel.swift */,
 				273C416C29B2501C00F11636 /* CodeView.swift */,
 				27D7F81629B317E000CCB912 /* Card.swift */,
+				27B8926329D9E54F001B537D /* Color+Extension.swift */,
 			);
 			path = Medic;
 			sourceTree = "<group>";
@@ -95,10 +104,37 @@
 		2767502F29B2469500A3CA40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				273C416E29B2601200F11636 /* Info.plist */,
 				2767502729B245EA00A3CA40 /* Preview Content */,
 				2767502529B245EA00A3CA40 /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27B8925D29D9D3F7001B537D /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				27B8925E29D9D40C001B537D /* Onboarding */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		27B8925E29D9D40C001B537D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				27B8925F29D9D423001B537D /* OnboardingView.swift */,
+				27B8926129D9D503001B537D /* OnboardingModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		27D2C17829DAD4650054F9B7 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				27D7F81429B3174900CCB912 /* CardView.swift */,
+				27D2C17929DAD4740054F9B7 /* CardViewModel.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +213,14 @@
 				27D7F81329B30B0F00CCB912 /* MedicButton.swift in Sources */,
 				2767502229B245E900A3CA40 /* MedicApp.swift in Sources */,
 				273C416D29B2501C00F11636 /* CodeView.swift in Sources */,
+				27D2C17A29DAD4740054F9B7 /* CardViewModel.swift in Sources */,
 				273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */,
 				27D7F81729B317E000CCB912 /* Card.swift in Sources */,
+				27B8926229D9D503001B537D /* OnboardingModel.swift in Sources */,
 				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
 				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,
+				27B8926029D9D423001B537D /* OnboardingView.swift in Sources */,
+				27B8926429D9E54F001B537D /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,11 +357,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.Medic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -346,11 +388,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.Medic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
