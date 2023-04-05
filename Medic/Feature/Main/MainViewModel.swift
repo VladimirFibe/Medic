@@ -8,10 +8,12 @@ final class MainViewModel: ObservableObject {
     @Published var basket: [Basket] = []
     @Published var news: [News] = []
     @Published var added: Set<Int> = []
+
     var sum: String {
-        let sum = basket.reduce(0, {$0 + $1.price})
+        let sum = basket.reduce(0, {$0 + ($1.price * $1.count)})
         return String(sum)
     }
+    
     func loadCatalog() async {
         do {
             let result = try await MedicHTTPClient.shared.catalog()

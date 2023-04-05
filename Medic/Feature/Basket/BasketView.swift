@@ -2,6 +2,7 @@ import SwiftUI
 
 struct BasketView: View {
     @ObservedObject var viewModel: MainViewModel
+
     var body: some View {
         VStack {
             HStack {
