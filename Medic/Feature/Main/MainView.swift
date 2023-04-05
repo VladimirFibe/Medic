@@ -13,8 +13,8 @@ struct MainView: View {
                     .foregroundColor(.medicGray)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(0 ..< 5) { item in
-                            Image("Banner")
+                        ForEach(viewModel.news) { news in
+                            NewsView(news: news)
                         }
                     }
                 }
@@ -50,6 +50,35 @@ struct MainView: View {
             await viewModel.loadCatalog()
             await viewModel.loadNews()
         }
+    }
+}
+
+struct NewsView: View {
+    let news: News
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(news.name).bold()
+            Spacer()
+            Text(news.description)
+            Text(news.price).bold()
+        }
+        .foregroundColor(.white)
+        .font(.system(size: 14))
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(
+            AsyncImage(url: URL(string: news.image)) { image in
+                image.resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+                .frame(height: 152)
+            , alignment: .trailing
+        )
+        .background(Color.medicBlue)
+        .frame(width: 250, height: 152)
+        .cornerRadius(10)
     }
 }
 

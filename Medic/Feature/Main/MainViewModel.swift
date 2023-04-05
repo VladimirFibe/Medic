@@ -21,7 +21,7 @@ final class MainViewModel: ObservableObject {
         do {
             let result = try await MedicHTTPClient.shared.news()
             DispatchQueue.main.async {
-                
+                self.news = result
             }
             
         } catch {
