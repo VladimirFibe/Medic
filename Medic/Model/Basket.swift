@@ -6,4 +6,7 @@ struct Basket: Identifiable {
     }
     let catalog: Catalog
     var count = 1
+    var price: Int {
+        Int(catalog.price) ?? 0
+    }
 }

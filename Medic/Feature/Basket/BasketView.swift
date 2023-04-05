@@ -7,7 +7,13 @@ struct BasketView: View {
             HStack {
                 Text("Корзина")
                 Spacer()
-                Image(systemName: "trash")
+                Button {
+                    viewModel.basket.removeAll()
+                    viewModel.added.removeAll()
+                } label: {
+                    Image(systemName: "trash")
+                }
+
             }
             List {
                 ForEach(viewModel.basket.indices, id: \.self) { index in
@@ -20,7 +26,7 @@ struct BasketView: View {
                         }
                         Spacer()
                         HStack {
-                            Text("690 ₽")
+                            Text("\(item.price * item.count)")
                             Spacer()
                             Stepper(value: $viewModel.basket[index].count, in: 1...9) {
                                 Text("\(viewModel.basket[index].count) пациент")
@@ -35,9 +41,15 @@ struct BasketView: View {
                     .cornerRadius(10)
                     .shadow(radius: 1)
                 }
+                
+                HStack {
+                    Spacer()
+                    Text(viewModel.sum)
+                }
             }
             .listStyle(.plain)
             .listRowSeparator(.hidden)
+            
         }
         .padding()
     }
