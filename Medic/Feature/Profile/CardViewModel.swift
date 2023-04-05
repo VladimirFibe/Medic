@@ -14,4 +14,12 @@ final class CardViewModel: ObservableObject {
             } catch {}
         }
     }
+    
+    func fetch() {
+        Task {
+//            do {
+//                try await MedicHTTPClient.shared.
+//            } catch {}
+        }
+    }
 }

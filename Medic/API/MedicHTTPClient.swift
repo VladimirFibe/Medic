@@ -54,6 +54,7 @@ final class MedicHTTPClient {
             throw NetworkError.decodingError
         }
     }
+    
     func signin(email: String, code: String) async throws -> String{
         guard let url = URL(string: "https://medic.madskill.ru/api/signin") else { throw NetworkError.invalidURL}
         var request = URLRequest(url: url)
@@ -72,6 +73,7 @@ final class MedicHTTPClient {
         }
         return response.token ?? ""
     }
+    
     func catalog() async throws -> [Catalog] {
         guard let url = URL(string: "https://medic.madskill.ru/api/catalog") else { throw NetworkError.invalidURL}
         var request = URLRequest(url: url)
@@ -87,6 +89,7 @@ final class MedicHTTPClient {
         }
         return response
     }
+    
     func news() async throws -> [News] {
         guard let url = URL(string: "https://medic.madskill.ru/api/news") else { throw NetworkError.invalidURL}
         var request = URLRequest(url: url)
@@ -102,6 +105,7 @@ final class MedicHTTPClient {
         }
         return response
     }
+    
     func createProfile(card: Card) async throws {
         guard let url = URL(string: "https://medic.madskill.ru/api/createProfile") else { throw NetworkError.invalidURL}
         var request = URLRequest(url: url)

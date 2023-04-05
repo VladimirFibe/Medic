@@ -100,6 +100,8 @@
 		275886C029DD21F7003B7820 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				27D7F81429B3174900CCB912 /* CardView.swift */,
+				27D2C17929DAD4740054F9B7 /* CardViewModel.swift */,
 				275886BE29DD21F1003B7820 /* ProfileView.swift */,
 			);
 			path = Profile;
@@ -240,8 +242,6 @@
 		27D2C17829DAD4650054F9B7 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				27D7F81429B3174900CCB912 /* CardView.swift */,
-				27D2C17929DAD4740054F9B7 /* CardViewModel.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
