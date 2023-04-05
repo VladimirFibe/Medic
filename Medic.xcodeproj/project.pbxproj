@@ -12,6 +12,9 @@
 		273C416D29B2501C00F11636 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416C29B2501C00F11636 /* CodeView.swift */; };
 		275886B929DCE723003B7820 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886B829DCE723003B7820 /* MainViewModel.swift */; };
 		275886BB29DCE72D003B7820 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886BA29DCE72D003B7820 /* MainView.swift */; };
+		275886BF29DD21F1003B7820 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886BE29DD21F1003B7820 /* ProfileView.swift */; };
+		275886C229DD2267003B7820 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886C129DD2267003B7820 /* BasketView.swift */; };
+		275886C529DD22CF003B7820 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886C429DD22CF003B7820 /* ResultsView.swift */; };
 		2767502229B245E900A3CA40 /* MedicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767502129B245E900A3CA40 /* MedicApp.swift */; };
 		2767502429B245E900A3CA40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767502329B245E900A3CA40 /* ContentView.swift */; };
 		2767502629B245EA00A3CA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502529B245EA00A3CA40 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		273C416E29B2601200F11636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		275886B829DCE723003B7820 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		275886BA29DCE72D003B7820 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		275886BE29DD21F1003B7820 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		275886C129DD2267003B7820 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		275886C429DD22CF003B7820 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		2767501E29B245E900A3CA40 /* Medic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2767502129B245E900A3CA40 /* MedicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApp.swift; sourceTree = "<group>"; };
 		2767502329B245E900A3CA40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +97,63 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		275886C029DD21F7003B7820 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				275886BE29DD21F1003B7820 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		275886C329DD226D003B7820 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				275886C129DD2267003B7820 /* BasketView.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		275886C629DD22E4003B7820 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				275886C429DD22CF003B7820 /* ResultsView.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		275886C729DD2361003B7820 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		275886C829DD2373003B7820 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27D7F81629B317E000CCB912 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		275886C929DD2385003B7820 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				27B8926329D9E54F001B537D /* Color+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		275886CA29DD239A003B7820 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
+				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2767501529B245E900A3CA40 = {
 			isa = PBXGroup;
 			children = (
@@ -110,15 +173,12 @@
 		2767502029B245E900A3CA40 /* Medic */ = {
 			isa = PBXGroup;
 			children = (
+				275886C929DD2385003B7820 /* Utilities */,
+				275886C829DD2373003B7820 /* Model */,
+				275886C729DD2361003B7820 /* API */,
 				275886BD29DCE905003B7820 /* App */,
 				27B8925D29D9D3F7001B537D /* Feature */,
 				2767502F29B2469500A3CA40 /* Supporting Files */,
-				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
-				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
-				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
-				27D7F81629B317E000CCB912 /* Card.swift */,
-				27B8926329D9E54F001B537D /* Color+Extension.swift */,
-				2788384729DBCD1300E89B2E /* Launch Screen.storyboard */,
 			);
 			path = Medic;
 			sourceTree = "<group>";
@@ -135,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				273C416E29B2601200F11636 /* Info.plist */,
+				2788384729DBCD1300E89B2E /* Launch Screen.storyboard */,
 				2767502729B245EA00A3CA40 /* Preview Content */,
 				2767502529B245EA00A3CA40 /* Assets.xcassets */,
 			);
@@ -154,11 +215,15 @@
 		27B8925D29D9D3F7001B537D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				275886CA29DD239A003B7820 /* Views */,
 				275886BC29DCE732003B7820 /* Main */,
 				27D2C17829DAD4650054F9B7 /* Card */,
 				275886B729DCE70B003B7820 /* Password */,
 				27A292F129DC47F000BC59A9 /* Login */,
 				27B8925E29D9D40C001B537D /* Onboarding */,
+				275886C029DD21F7003B7820 /* Profile */,
+				275886C329DD226D003B7820 /* Basket */,
+				275886C629DD22E4003B7820 /* Results */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -252,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275886C229DD2267003B7820 /* BasketView.swift in Sources */,
 				2767502429B245E900A3CA40 /* ContentView.swift in Sources */,
 				27D7F81529B3174A00CCB912 /* CardView.swift in Sources */,
 				273C416929B24C6C00F11636 /* MedicHTTPClient.swift in Sources */,
@@ -262,7 +328,9 @@
 				273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */,
 				27D7F81729B317E000CCB912 /* Card.swift in Sources */,
 				27B8926229D9D503001B537D /* OnboardingModel.swift in Sources */,
+				275886BF29DD21F1003B7820 /* ProfileView.swift in Sources */,
 				275886B929DCE723003B7820 /* MainViewModel.swift in Sources */,
+				275886C529DD22CF003B7820 /* ResultsView.swift in Sources */,
 				275886BB29DCE72D003B7820 /* MainView.swift in Sources */,
 				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
 				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,

@@ -48,6 +48,7 @@ struct MainView: View {
         .listStyle(.plain)
         .task {
             await viewModel.loadCatalog()
+            await viewModel.loadNews()
         }
     }
 }

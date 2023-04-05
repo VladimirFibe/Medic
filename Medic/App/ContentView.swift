@@ -33,17 +33,17 @@ struct ContentView: View {
                     Text("Анализы")
                 }
                 .tag(0)
-            MainView().tabItem {
+            ResultsView().tabItem {
                 Image("result")
                     .renderingMode(.template)
                 Text("Результаты")
             }.tag(1)
-            MainView().tabItem {
+            BasketView().tabItem {
                 Image("support")
                     .renderingMode(.template)
                 Text("Поддержка")
             }.tag(2)
-            MainView().tabItem {
+            ProfileView().tabItem {
                 Image("profile")
                     .renderingMode(.template)
                 Text("Профиль")
