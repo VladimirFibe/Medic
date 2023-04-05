@@ -5,7 +5,9 @@ final class MainViewModel: ObservableObject {
     @Published var search = ""
     @Published var selectedCatalog = "Популярные"
     @Published var catalog: [Catalog] = []
+    @Published var basket: [Basket] = []
     @Published var news: [News] = []
+    @Published var added: Set<Int> = []
     func loadCatalog() async {
         do {
             let result = try await MedicHTTPClient.shared.catalog()
@@ -27,5 +29,19 @@ final class MainViewModel: ObservableObject {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func addCatalog(_ catalog: Catalog) {
+        if let index = basket.firstIndex(where: { $0.id == catalog.id}) {
+            basket.remove(at: index)
+            added.remove(catalog.id)
+        } else {
+            basket.append(Basket(catalog: catalog))
+            added.insert(catalog.id)
+        }
+    }
+    
+    func remove(_ index: Int) -> Bool {
+        added.contains(index)
     }
 }

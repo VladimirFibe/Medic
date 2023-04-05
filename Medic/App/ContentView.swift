@@ -38,7 +38,7 @@ struct ContentView: View {
                     .renderingMode(.template)
                 Text("Результаты")
             }.tag(1)
-            BasketView().tabItem {
+            Text("Support").tabItem {
                 Image("support")
                     .renderingMode(.template)
                 Text("Поддержка")

@@ -1,13 +1,7 @@
-//
-//  BasketView.swift
-//  Medic
-//
-//  Created by Vladimir on 05.04.2023.
-//
-
 import SwiftUI
 
 struct BasketView: View {
+    @ObservedObject var viewModel: MainViewModel
     var body: some View {
         VStack {
             HStack {
@@ -15,9 +9,31 @@ struct BasketView: View {
                 Spacer()
                 Image(systemName: "trash")
             }
-            List(0 ..< 2) { item in
-                ForEach(0 ..< 5) { item in
-                    BasketItem()
+            List {
+                ForEach(viewModel.basket.indices, id: \.self) { index in
+                    let item = viewModel.basket[index]
+                    VStack {
+                        HStack {
+                            Text(item.catalog.name)
+                            Spacer()
+                            Image(systemName: "xmark")
+                        }
+                        Spacer()
+                        HStack {
+                            Text("690 ₽")
+                            Spacer()
+                            Stepper(value: $viewModel.basket[index].count, in: 1...9) {
+                                Text("\(viewModel.basket[index].count) пациент")
+                            }
+                            .frame(width: 200)
+                        }
+                        
+                    }
+                    .padding(8)
+                    .frame(height: 138)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 1)
                 }
             }
             .listStyle(.plain)
@@ -29,6 +45,7 @@ struct BasketView: View {
 
 struct BasketItem: View {
     @State private var step = 1
+    var item: Basket
     var body: some View {
         VStack {
             HStack {
@@ -56,6 +73,6 @@ struct BasketItem: View {
 }
 struct BasketView_Previews: PreviewProvider {
     static var previews: some View {
-        BasketView()
+        BasketView(viewModel: MainViewModel())
     }
 }

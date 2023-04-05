@@ -1,8 +1,24 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var show = false
     @ObservedObject var viewModel = MainViewModel()
     var body: some View {
+        VStack {
+            content
+            if !viewModel.basket.isEmpty {
+                MedicButton(title: "В корзину") {
+                    show.toggle()
+                }
+                .padding()
+                .background(Color.white)
+            }
+        }
+        .sheet(isPresented: $show) {
+            BasketView(viewModel: viewModel)
+        }
+    }
+    var content: some View {
         List {
             VStack(alignment: .leading, spacing: 10) {
                 
@@ -41,7 +57,7 @@ struct MainView: View {
                 }
             }
             ForEach(viewModel.catalog) { item in
-                CatalogItem(item: item)
+                CatalogItem(viewModel: viewModel, item: item)
             }
         }
         .listRowSeparator(.hidden)
@@ -83,6 +99,7 @@ struct NewsView: View {
 }
 
 struct CatalogItem: View {
+    @ObservedObject var viewModel: MainViewModel
     let item: Catalog
     var body: some View {
         let roundRect = RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -98,16 +115,17 @@ struct CatalogItem: View {
                         .font(.system(size: 17, weight: .semibold))
                 }
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Text("Добавить")
+                Button(action: {
+                    viewModel.addCatalog(item)
+                }) {
+                    Text(viewModel.remove(item.id) ? "Убрать" : "Добавить")
                         .font(.system(size: 14, weight: .semibold))
                         .padding(.vertical, 10)
                         .padding(.horizontal)
-                        .foregroundColor(.white)
+                        .foregroundColor(viewModel.remove(item.id) ? .accentColor : .white)
                         .background(RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.accentColor))
+                            .fill(viewModel.remove(item.id) ? Color.white : Color.accentColor))
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.accentColor, lineWidth: 1))
                 }
 
             }
