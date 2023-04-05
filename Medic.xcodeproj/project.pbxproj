@@ -10,6 +10,8 @@
 		273C416929B24C6C00F11636 /* MedicHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416829B24C6C00F11636 /* MedicHTTPClient.swift */; };
 		273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416A29B24F3C00F11636 /* LoginViewModel.swift */; };
 		273C416D29B2501C00F11636 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416C29B2501C00F11636 /* CodeView.swift */; };
+		275886B929DCE723003B7820 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886B829DCE723003B7820 /* MainViewModel.swift */; };
+		275886BB29DCE72D003B7820 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275886BA29DCE72D003B7820 /* MainView.swift */; };
 		2767502229B245E900A3CA40 /* MedicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767502129B245E900A3CA40 /* MedicApp.swift */; };
 		2767502429B245E900A3CA40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767502329B245E900A3CA40 /* ContentView.swift */; };
 		2767502629B245EA00A3CA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2767502529B245EA00A3CA40 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		273C416A29B24F3C00F11636 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		273C416C29B2501C00F11636 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		273C416E29B2601200F11636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		275886B829DCE723003B7820 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		275886BA29DCE72D003B7820 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2767501E29B245E900A3CA40 /* Medic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2767502129B245E900A3CA40 /* MedicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicApp.swift; sourceTree = "<group>"; };
 		2767502329B245E900A3CA40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275886B729DCE70B003B7820 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		275886BC29DCE732003B7820 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				275886BA29DCE72D003B7820 /* MainView.swift */,
+				275886B829DCE723003B7820 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		275886BD29DCE905003B7820 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2767502329B245E900A3CA40 /* ContentView.swift */,
+				2767502129B245E900A3CA40 /* MedicApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		2767501529B245E900A3CA40 = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +110,10 @@
 		2767502029B245E900A3CA40 /* Medic */ = {
 			isa = PBXGroup;
 			children = (
+				275886BD29DCE905003B7820 /* App */,
 				27B8925D29D9D3F7001B537D /* Feature */,
 				2767502F29B2469500A3CA40 /* Supporting Files */,
-				2767502129B245E900A3CA40 /* MedicApp.swift */,
-				2767502329B245E900A3CA40 /* ContentView.swift */,
-				27D2C17829DAD4650054F9B7 /* Card */,
 				27D7F81029B3090000CCB912 /* MedicTextField.swift */,
-				27A292F229DC4D2B00BC59A9 /* CreatePasswordView.swift */,
 				27D7F81229B30B0F00CCB912 /* MedicButton.swift */,
 				273C416829B24C6C00F11636 /* MedicHTTPClient.swift */,
 				27D7F81629B317E000CCB912 /* Card.swift */,
@@ -127,6 +154,9 @@
 		27B8925D29D9D3F7001B537D /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				275886BC29DCE732003B7820 /* Main */,
+				27D2C17829DAD4650054F9B7 /* Card */,
+				275886B729DCE70B003B7820 /* Password */,
 				27A292F129DC47F000BC59A9 /* Login */,
 				27B8925E29D9D40C001B537D /* Onboarding */,
 			);
@@ -232,6 +262,8 @@
 				273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */,
 				27D7F81729B317E000CCB912 /* Card.swift in Sources */,
 				27B8926229D9D503001B537D /* OnboardingModel.swift in Sources */,
+				275886B929DCE723003B7820 /* MainViewModel.swift in Sources */,
+				275886BB29DCE72D003B7820 /* MainView.swift in Sources */,
 				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
 				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,
 				27A292F329DC4D2B00BC59A9 /* CreatePasswordView.swift in Sources */,
