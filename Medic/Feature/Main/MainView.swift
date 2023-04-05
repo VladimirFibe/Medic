@@ -3,7 +3,7 @@ import SwiftUI
 struct MainView: View {
     @ObservedObject var viewModel = MainViewModel()
     var body: some View {
-        VStack(alignment: .leading) {
+        List {
             VStack(alignment: .leading, spacing: 10) {
                 
                 MedicTextField(title: "Искать анализы", icon: "magnifyingglass", text: $viewModel.search)
@@ -24,7 +24,7 @@ struct MainView: View {
                     .foregroundColor(.medicGray)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(viewModel.catalog, id: \.self) { title in
+                        ForEach(viewModel.category, id: \.self) { title in
                             Text(title)
                                 .font(.system(size: 15, weight: .medium))
                                 .padding(.vertical, 10)
@@ -40,32 +40,31 @@ struct MainView: View {
                     }
                 }
             }
-            .padding(.horizontal)
-            List {
-                ForEach(0 ..< 5) { item in
-                    CatalogItem()
-                }
-                .listRowSeparator(.hidden)
+            ForEach(viewModel.catalog) { item in
+                CatalogItem(item: item)
             }
-            .listStyle(.plain)
-            
-            
+        }
+        .listRowSeparator(.hidden)
+        .listStyle(.plain)
+        .task {
+            await viewModel.loadCatalog()
         }
     }
 }
 
 struct CatalogItem: View {
+    let item: Catalog
     var body: some View {
         let roundRect = RoundedRectangle(cornerRadius: 12, style: .continuous)
         VStack(alignment: .leading) {
-            Text("ПЦР-тест на определение РНК короновируса стандартный")
+            Text(item.name)
                 .font(.system(size: 16, weight: .medium))
             HStack {
                 VStack(alignment: .leading) {
-                    Text("2 дня")
+                    Text(item.time_result)
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.medicGray)
-                    Text("1800 ₽")
+                    Text(item.price)
                         .font(.system(size: 17, weight: .semibold))
                 }
                 Spacer()
