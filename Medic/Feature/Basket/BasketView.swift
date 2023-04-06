@@ -3,6 +3,7 @@ import SwiftUI
 struct BasketView: View {
     @ObservedObject var viewModel: MainViewModel
 
+    @State private var showOrder = false
     var body: some View {
         VStack {
             HStack {
@@ -50,9 +51,14 @@ struct BasketView: View {
             }
             .listStyle(.plain)
             .listRowSeparator(.hidden)
-            
+            MedicButton(title: "Перейти к оформлению заказа") {
+                showOrder.toggle()
+            }
         }
         .padding()
+        .sheet(isPresented: $showOrder) {
+            OrderView(viewModel: viewModel)
+        }
     }
 }
 

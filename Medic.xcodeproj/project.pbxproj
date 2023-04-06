@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2713019F29DEC67E007A1517 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2713019E29DEC67E007A1517 /* OrderView.swift */; };
 		273C416929B24C6C00F11636 /* MedicHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416829B24C6C00F11636 /* MedicHTTPClient.swift */; };
 		273C416B29B24F3C00F11636 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416A29B24F3C00F11636 /* LoginViewModel.swift */; };
 		273C416D29B2501C00F11636 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C416C29B2501C00F11636 /* CodeView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2713019E29DEC67E007A1517 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		273C416829B24C6C00F11636 /* MedicHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicHTTPClient.swift; sourceTree = "<group>"; };
 		273C416A29B24F3C00F11636 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		273C416C29B2501C00F11636 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				275886C129DD2267003B7820 /* BasketView.swift */,
+				2713019E29DEC67E007A1517 /* OrderView.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				2767503129B247DD00A3CA40 /* EmailView.swift in Sources */,
 				27D7F81129B3090000CCB912 /* MedicTextField.swift in Sources */,
 				27A292F329DC4D2B00BC59A9 /* CreatePasswordView.swift in Sources */,
+				2713019F29DEC67E007A1517 /* OrderView.swift in Sources */,
 				27B8926029D9D423001B537D /* OnboardingView.swift in Sources */,
 				27B8926429D9E54F001B537D /* Color+Extension.swift in Sources */,
 			);
