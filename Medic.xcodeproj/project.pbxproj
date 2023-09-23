@@ -24,6 +24,12 @@
 		021026F82ABEEB000017990B /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026F22ABEEB000017990B /* Presentable.swift */; };
 		021026F92ABEEB000017990B /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026F32ABEEB000017990B /* Transition.swift */; };
 		021026FA2ABEEB000017990B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026F42ABEEB000017990B /* Coordinator.swift */; };
+		021026FD2ABEEC710017990B /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026FC2ABEEC710017990B /* SplashScreenViewController.swift */; };
+		021027002ABEEEF80017990B /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021026FF2ABEEEF80017990B /* ModuleFactory.swift */; };
+		021027052ABEF0A00017990B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021027042ABEF0A00017990B /* ApplicationCoordinator.swift */; };
+		021027072ABEF0DE0017990B /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021027062ABEF0DE0017990B /* CoordinatorFactory.swift */; };
+		021027092ABEF3360017990B /* SplashScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021027082ABEF3360017990B /* SplashScreenCoordinator.swift */; };
+		0210270B2ABEF57A0017990B /* SystemNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0210270A2ABEF57A0017990B /* SystemNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		021026F22ABEEB000017990B /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		021026F32ABEEB000017990B /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		021026F42ABEEB000017990B /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		021026FC2ABEEC710017990B /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		021026FF2ABEEEF80017990B /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		021027042ABEF0A00017990B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		021027062ABEF0DE0017990B /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		021027082ABEF3360017990B /* SplashScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCoordinator.swift; sourceTree = "<group>"; };
+		0210270A2ABEF57A0017990B /* SystemNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +90,11 @@
 		021026C42ABEE9780017990B /* Medic */ = {
 			isa = PBXGroup;
 			children = (
-				021026DB2ABEEAC40017990B /* Fabrica */,
 				021026D92ABEEA6F0017990B /* App */,
+				021027012ABEF05E0017990B /* Coordinators */,
+				021026FE2ABEEDF10017990B /* Factories */,
+				021026FB2ABEEC220017990B /* Modules */,
+				021026DB2ABEEAC40017990B /* BaseFactory */,
 				021026DA2ABEEA790017990B /* Supporting Files */,
 			);
 			path = Medic;
@@ -103,14 +118,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		021026DB2ABEEAC40017990B /* Fabrica */ = {
+		021026DB2ABEEAC40017990B /* BaseFactory */ = {
 			isa = PBXGroup;
 			children = (
 				021026EE2ABEEB000017990B /* Protocols */,
 				021026E52ABEEAF50017990B /* Core */,
 				021026DC2ABEEAEB0017990B /* Common */,
 			);
-			path = Fabrica;
+			path = BaseFactory;
 			sourceTree = "<group>";
 		};
 		021026DC2ABEEAEB0017990B /* Common */ = {
@@ -146,6 +161,33 @@
 				021026F42ABEEB000017990B /* Coordinator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		021026FB2ABEEC220017990B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				021026FC2ABEEC710017990B /* SplashScreenViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		021026FE2ABEEDF10017990B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				021026FF2ABEEEF80017990B /* ModuleFactory.swift */,
+				021027062ABEF0DE0017990B /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		021027012ABEF05E0017990B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				021027042ABEF0A00017990B /* ApplicationCoordinator.swift */,
+				021027082ABEF3360017990B /* SplashScreenCoordinator.swift */,
+				0210270A2ABEF57A0017990B /* SystemNavigationController.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,16 +265,22 @@
 				021026FA2ABEEB000017990B /* Coordinator.swift in Sources */,
 				021026ED2ABEEAF50017990B /* BaseCoordinator.swift in Sources */,
 				021026F62ABEEB000017990B /* LifeCycleListener.swift in Sources */,
+				021027052ABEF0A00017990B /* ApplicationCoordinator.swift in Sources */,
+				021027072ABEF0DE0017990B /* CoordinatorFactory.swift in Sources */,
 				021026C62ABEE9780017990B /* AppDelegate.swift in Sources */,
 				021026E32ABEEAEB0017990B /* ModalPresentationStyle.swift in Sources */,
 				021026E12ABEEAEB0017990B /* UINavigationController+.swift in Sources */,
 				021026EA2ABEEAF50017990B /* DefaultLifeCycleListener.swift in Sources */,
 				021026F72ABEEB000017990B /* Routable.swift in Sources */,
+				021027002ABEEEF80017990B /* ModuleFactory.swift in Sources */,
+				021026FD2ABEEC710017990B /* SplashScreenViewController.swift in Sources */,
 				021026EB2ABEEAF50017990B /* AnyCoordinator.swift in Sources */,
 				021026E22ABEEAEB0017990B /* AutomaticCoordinatorConfiguration.swift in Sources */,
 				021026F82ABEEB000017990B /* Presentable.swift in Sources */,
 				021026F52ABEEB000017990B /* SystemNavigation.swift in Sources */,
+				0210270B2ABEF57A0017990B /* SystemNavigationController.swift in Sources */,
 				021026EC2ABEEAF50017990B /* ApplicationRouter.swift in Sources */,
+				021027092ABEF3360017990B /* SplashScreenCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
